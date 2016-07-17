@@ -1,0 +1,15 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://jaxws.goochfriend.org/endpoint/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EchoRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="requestBean">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="applicationid"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
