@@ -763,7 +763,9 @@
       <jvmarg value="-Dlucee.extensions.install=true"/>
       <jvmarg value="-Dlucee.full.null.support=false"/>
     </java>
+
     <echo>${exc}</echo>
+
 
 </target>
 
@@ -1101,8 +1103,15 @@
       jarfile="${trgLoader}/lucee-${version}.jar" 
       manifest="${goal}/META-INF/MANIFEST.MF"/>
 
+    <!-- WEB-INF -->
+    <mkdir dir="${temp}/war/WEB-INF/lib" />
+    <copy file="${core}/resource/lib/lucee-external-agent.jar" tofile="${temp}/war/WEB-INF/lib/lucee-inst.jar" />
+    <copy file="${srcCore}/resource/config/j2ee-web.xml" tofile="${temp}/war/WEB-INF/web.xml" />
+    <copy file="${trgLoader}/lucee-${version}.jar" tofile="${temp}/war/WEB-INF/lib/lucee.jar" />
 
-    <delete dir="${temp}"/>
+
+
+    <!-- delete dir="${temp}"/ -->
     <echots message="done"/>
     
   </target>
