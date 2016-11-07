@@ -1,0 +1,16 @@
+How to use this:
+
+Make sure you have commandbox 3.3 (or better) installed.
+In this test-browser folder, type `box install`.  Let commandbox install testbox.
+
+cd ../loader
+ant fast
+cd ../test-browser
+bash run.sh
+
+It should run a lucee server using the jar you just compiled, and open a browser to the test-browser.
+
+Hit run all.
+
+
+
